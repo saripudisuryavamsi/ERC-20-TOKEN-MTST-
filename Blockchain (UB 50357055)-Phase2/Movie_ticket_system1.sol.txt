@@ -1,0 +1,11 @@
+
+pragma solidity ^0.8.7;
+
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol";
+contract Movie_ticket_system is ERC20 {
+    address public admin;
+    constructor () ERC20("Movie Ticketing System Token", "MTST") {
+        _mint(msg.sender, 100000 * (10 ** 2));
+        admin = msg.sender;
+    }
+}
